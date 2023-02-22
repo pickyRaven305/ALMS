@@ -1,0 +1,8 @@
+{% extends 'home/base.html' %} {% load static %} {% block title %} change email {% endblock title %}{% load crispy_forms_tags %} {% block content %}
+<h1 class="h3 mb-3 fw-normal w-50 mx-auto">Please Provide the information for Changing email</h1>
+<form method="post" class="form-group w-25 mx-auto" >
+
+    {% csrf_token %} {{form|crispy}}
+    <button type="submit" class="btn btn-success"> Update email </button>
+</form>
+{% endblock content %}

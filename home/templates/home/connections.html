@@ -1,0 +1,116 @@
+{% extends 'home/base.html' %}
+
+{% load static %}
+{% block title %} ALMS {% endblock title %}
+
+
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div.gallery {
+  margin: 0;
+  border: 2px  ;
+  border-radius: 10px;
+  float: left;
+  width: 415px;
+  background-color: rgb(225, 219, 174);
+  color: rgb(0, 0, 0);
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+  background-color: antiquewhite;
+  border-radius: 10px;
+  color: black;
+ 
+}
+
+div.gallery img {
+  width: 100%;
+  padding: 10px;
+  border: 2px  ;
+  border-radius: 5px;
+   height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+button{
+  border: 2px solid black;
+  border-radius: 5px;
+  background-color: black;
+  color: white;
+  align-items: center;
+  padding: 2px;
+  margin-left:40px ;
+  margin-bottom: 5px;
+  text-align: center;
+}
+button :hover{
+  color: rgb(0, 0, 0);
+  
+  font-size: medium;
+}
+</style>
+</head>
+<body>
+  <h1 style="text-align: center; font-weight:bold;">NGO's</h1>
+<div class="gallery">
+ 
+    <img src="{% static 'images/ngo 2.jpeg' %}" alt="Cinque Terre" width="600" height="400">
+  
+  <div>
+    <p style="font-weight: bold; text-align: center;"><a href="https://www.google.com/search?q=Paryavaran+Samanvay+Sanstha&rlz=1C1MMCH_enIN1016IN1016&oq=parya&aqs=chrome.0.69i59j69i57j0i67i433l2j0i67j0i67i433j69i60l2.3383j0j7&sourceid=chrome&ie=UTF-8" > Paryavaran  Samanvay Sanstha</a> </p>
+    {% if request.user.is_authenticated %}
+    <button> <a href="{% url 'donation:donate' user.id%}" style="color: white;">Donate</a> </button> <button><a href="{% url 'donation:add_item' user.id%}" style="color: white;">Upload Item</a> </button>
+    {% endif %}
+  </div>
+</div>
+
+<div class="gallery">
+ 
+    <img src="{% static 'images/ngo 1.png' %}" alt="Cinque Terre" width="600" height="400">
+  
+  <div>
+    <p style="font-weight: bold; text-align:center;"><a href="https://www.justdial.com/Bhopal/Aabhiruchi-Jan-Kalyan-Sansthan-Near-Anapurna-Complex-Sultanbad/0755PX755-X755-140617120434-M3R3_BZDET" target="_blank">Aabhiruchi Jan Kalyan Sansthan</a> </p>
+    {% if request.user.is_authenticated %}
+    <button> <a href="{% url 'donation:donate' user.id%}" style="color: white;">Donate</a> </button> <button><a href="{% url 'donation:add_item' user.id%}" style="color: white;">Upload Item</a> </button>
+    {% endif %}
+  </div>
+</div>
+
+<div class="gallery">
+ 
+  <img src="{% static 'images/ngo3.jpeg' %}" alt="Cinque Terre" width="600" height="400">
+
+<div>
+  <p style="text-align:center;"><a href="https://www.justdial.com/Bhopal/Progressive-Advance-Welfare-Society-Arera-Colony/0755PX755-X755-200731115015-M9D7_BZDET" target="_blank">Progressive Advance Welfare Society</a> </p>
+  {% if request.user.is_authenticated %}
+  <button> <a href="{% url 'donation:donate' user.id%}" style="color: white;">Donate</a> </button> <button><a href="{% url 'donation:add_item' user.id%}" style="color: white;">Upload Item</a> </button>
+  {% endif %}
+</div>
+</div>
+
+
+
+
+
+  
+  
+  
+  
+ 
+</body>
+</html>
+
+
+
+
+
+
+      
+{% endblock content %}

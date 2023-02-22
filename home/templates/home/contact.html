@@ -1,0 +1,124 @@
+{% extends 'home/base.html' %} {% load static %} {% block title %} ALMS {% endblock title %} 
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    
+    
+    <script src="//ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.1.js" type="text/javascript"></script>
+    
+</head>
+{% block content %}
+
+<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" id="modal-btn" style="width: 100%; height:200px">Click here to get in touch</button>
+
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog modal-lg">
+        <!-- Modal content-->
+        
+        
+        <div class="modal-body" style="margin-top: -100px;">
+            <div class="contact_section layout_padding">
+                <div class="container" style="background-color: rgb(182, 210, 227);">
+                    
+                    <img src="{% static 'sky1.jpg' %}" alt="" width="100%">
+                        <!--Section: Contact v.2-->
+                        <section class="mb-15">
+
+                            <!--Section heading-->
+                            <h2 class="h1-responsive font-weight-bold text-center my-4" style="font-weight:bold">Contact us</h2>
+                            <!--Section description-->
+                            <p class="text-center w-responsive mx-auto mb-5" style="background-color: rgb(255, 255, 255); color: black; font-weight: bold;" >Do you have any questions? Please do not hesitate to contact us directly. Our team will come back to you within a matter of hours to help you.</p>
+
+
+                            <div class="row">
+                                
+                                <!--Grid column-->
+                                <div class="col-md-9 mb-md-0 mb-5">
+                                    <form id="contact-form" name="contact-form" method="POST">
+                                        {% csrf_token %}
+
+                                        <!--Grid row-->
+                                        <div class="row">
+
+                                            <!--Grid column-->
+                                            <div class="col-md-4">
+                                                <div class="md-form mb-0">
+                                                    <input type="text" id="name" placeholder="Name" name="Name" class="form-control">
+                                                    <label for="name" class="">Your name</label>
+                                                </div>
+                                            </div>
+                                            <!--Grid column-->
+
+                                            <!--Grid column-->
+                                            <div class="col-md-4">
+                                                <div class="md-form mb-0">
+                                                    <input type="text" id="email" placeholder="Email" name="Email" class="form-control">
+                                                    <label for="email" class="">Your email</label>
+                                                </div>
+                                            </div>
+                                            <!--Grid column-->
+
+                                        </div>
+                                        <!--Grid row-->
+
+                                        <!--Grid row-->
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="md-form mb-0">
+                                                    <input type="text" id="subject" placeholder="Phone Number" name="Phone" class="form-control">
+                                                    <label for="subject" class="">Phone</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--Grid row-->
+
+                                        <!--Grid row-->
+                                        <div class="row">
+
+                                            <!--Grid column-->
+                                            <div class="col-md-10">
+
+                                                <div class="md-form">
+                                                    <textarea type="text" placeholder="Massage" rows="5" id="comment" name="Message" class="form-control md-textarea"></textarea>
+                                                    <label for="message">Your message</label>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <!--Grid row-->
+
+                                        <button type="submit" class="btn btn-primary" name="submit">SEND</button>
+                                        <h1>  </h1>
+                                        <h2 style="font-size: 10px; float:right;">click anywhere to exit</h2>
+                                    </form>
+
+
+
+                                    <!--Grid column-->
+
+                                </div>
+                            </div>
+
+                        </section>
+                        <!--Section: Contact v.2-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <!-- join us section end -->
+    {% endblock content %}
+    <script src="https://khaalipaper.com/js/jquery-3.2.1.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <script>
+        $(window).load(function() {
+            $('#myModal').modal('show');
+        });
+    </script>

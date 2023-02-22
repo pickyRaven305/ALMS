@@ -1,0 +1,69 @@
+{% extends 'home/base.html' %}
+
+{% load static %}
+{% block title %} Services {% endblock title %}
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+<style>head, body{background-color: lightcyan}.card{cursor: pointer}.hd{font-size: 25px;font-weight: 550}.card.hover, .card:hover{box-shadow: 0 20px 40px rgba(0, 0, 0, .2)}.img{margin-bottom: 35px;-webkit-filter: drop-shadow(5px 5px 5px #222);filter: drop-shadow(5px 5px 5px #222)}.card-title{font-weight: 600}button.focus, button:focus{outline: 0;box-shadow: none !important}.ft{margin-top: 25px}.chk{margin-bottom: 5px}.rck{margin-top: 20px;padding-bottom: 15px}</style>
+<!-- body -->
+{% block content %}
+
+<h1 style="text-align: center; font-weight:bold;">SERVICES</h1>
+<div class='container-fluid mx-auto mt-10 mb-10 col-12' style="text-align: center ">
+    
+    
+    
+    <div class="row" style="justify-content: center"  >
+        <div class="card col-md-5 col-5 ml-2" style="background-color: rgb(220, 206, 255);  ">
+            <div class="card-content">
+                <div class="card-body" > <img class="img" src="{% static 'images/min cost.png' %}" style="height: 100px; width:100px">
+                    <div class="shadow"></div>
+                    <div class="card-title" style="color: black; font-weight:bold; font-size: large;"> Supplying goods at minimum possible cost
+                    </div>
+                    <div class="card-subtitle">
+                        <p style="color: black;"> There are people out there in need of essential goods such as utensils, books, clothes. Be the one to help such people out there by organizing charity drives with us!.According to Amarjeet Singh Batra, country manager, OLX India, a leading classifieds site, the estimated size of the second-hand market in India is about Rs 50,000-60,000 crore.</small> </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card col-md-5 col-5 ml-2" style="background-color: rgb(247, 255, 205);">
+            <div class="card-content">
+                <div class="card-body"> <img class="img" src="{% static 'images/bhandaras.jpeg' %}" style="height: 100px; width:100px" >
+                    <div class="card-title" style="color: black; font-weight:bold; font-size:large;"> Organizing charity events.Such as Bhandara.</div>
+                    <div class="card-subtitle">
+                        <p style="color: black;"> India is not poor, yet hunger remains an issue. India’s GDP has significantly increased over the last two decades to 2.246 trillion USD. The misplacement of resources and predetermined cultural norms, such as the caste system, have prevented the state from moving forward. This problem can be solved with Bhandara’s. If want to organize one or donate to one, be part of our team! 
+                        </small> </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card col-md-5 col-5 ml-2"style="background-color:rgb(176, 241, 205);">
+            <div class="card-content">
+                <div class="card-body" > <img class="img rck" src="https://i.imgur.com/rG3CGn3.png" />
+                    <div class="card-title" style="color: black; font-weight:bold; font-size:large ;" >To feed hungry people.
+                    </div>
+                    <div class="card-subtitle">
+                        <p style="color: black;">India ranks 97th in addressing hunger. The country’s condition is worse than many believe. Despite being an economic powerhouse, India lacks the resources to properly fix its hunger issue. The situation has improved. Since 2008, India has climbed five spots in the world ranking from 102 to 97. While there is still substantial room for improvement, the data show that progress is underway. Be part of this progress by connecting with us!.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card col-md-5 col-5 ml-2" style="background-color: rgb(143, 183, 240);">
+            <div class="card-content">
+                <div class="card-body" > <img class="img rck" src="https://i.imgur.com/rG3CGn3.png" />
+                    <div class="card-title" style="color: black; font-weight:bold; font-size: large;" > To feed street animals </div>
+                    <div class="card-subtitle">
+                        <p style="color: black;"> Stray dogs are a human-created problem. A combination of poor waste management, and other factors,the World Health Organization (WHO) estimates that the stray dog population of India is approximately 35 million. Stray dogs scavenging from rubbish is a common sight in India. Be part of our team to help the animals struggling on the streets!.</small> </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h1></h1>
+    <h1></h1>
+</div>
+   
+ 
+   
+{% endblock content %}

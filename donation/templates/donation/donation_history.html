@@ -1,0 +1,57 @@
+{% extends 'home/base.html' %} {% load static %} {% block title %} donation history{% endblock title %} {% load crispy_forms_tags %} {% block content %}
+<form method="post" >
+    {% csrf_token %}
+    <table class="table table-bordered mx-auto " style="width: 1000px;">
+        <tbody>
+            <thead>
+                <tr>
+                    <th>amount</th>
+                    <th>donated on</th>
+                </tr>
+            </thead>
+
+            <tr>
+
+                {% for i in donor_list%}
+                
+                <td class="mx-auto " style="width: 200px; ">
+                    <p>{{i.amount}}</p>
+                </td>
+               
+                <td class="mx-auto " style="width: 200px; ">
+                    <p>{{i.donated_on}}</p>
+                </td>
+
+
+                </div>
+            </tr>
+
+
+            </td>
+            </tr>
+
+            {% endfor %}
+        </tbody>
+    </table>
+    {% if donor_list.has_other_pages %}
+    <h1>
+        <ul class="pagination mx-auto text-white" style="width: 200px;" ">
+        {% if donor_list.has_previous %}
+        <li><a href="?page={{ donor_list.previous_page_number }} ">&laquo;</a></li>
+        {% else %}
+        <li class="disabled "><span>&laquo;</span></li>
+        {% endif %} {% for i in donor_list.paginator.page_range %} {% if donor_list.number == i %}
+        <li class="active "><span>{{ i }} <span class="sr-only ">(current)</span></span>
+        </li>
+        {% else %}
+        <li><a href="?page={{ i }} ">{{ i }}</a></li>
+        {% endif %} {% endfor %} {% if donor_list.has_next %}
+        <li><a href="?page={{ donor_list.next_page_number }} ">&raquo;</a></li>
+        {% else %}
+        <li class="disabled "><span>&raquo;</span></li>
+        {% endif %}
+    </ul>
+</h1>
+</form>
+
+{% endif %} {% endblock content %}
